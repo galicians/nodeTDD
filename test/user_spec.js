@@ -9,7 +9,7 @@ describe("User", function() {
         before(function() {
             user = new User({email : "galicians@gmail.com"})
         });
-        
+
         it("email is galicians@gmail.com", function() {
             user.email.should.equal("galicians@gmail.com");
         });
@@ -29,7 +29,7 @@ describe("User", function() {
             user.lastLoginAt.should.be.defined;
         });
         it("has currentLogin", function() {
-            // user.currentLogin
+            user.currentLoginAt.should.be.defined;
         });
     });
 });
