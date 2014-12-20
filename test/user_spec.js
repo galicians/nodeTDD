@@ -9,19 +9,27 @@ describe("User", function() {
         before(function() {
             user = new User({email : "galicians@gmail.com"})
         });
-
+        
         it("email is galicians@gmail.com", function() {
             user.email.should.equal("galicians@gmail.com");
         });
-
-        it("has and authentication token");
-        it("has a pending status");
-        it("has a created date");
-        it("has a signInCount of 0");
-        it("has lastLogin");
-        it("has currentLogin");
-        it("has a sessionToken");
-        it("has a reminder Token");
-        it("has a reminder sent date");
+        it("has and authentication token", function() {
+            user.authenticationToken.should.be.defined;
+        });
+        it("has a pending status", function() {
+            user.status.should.equal("pending");
+        });
+        it("has a created date", function(){
+            user.createdAt.should.be.defined;
+        });
+        it("has a signInCount of 0", function() {
+            user.signInCount.should.equal(0)
+        });
+        it("has lastLogin", function() {
+            user.lastLoginAt.should.be.defined;
+        });
+        it("has currentLogin", function() {
+            // user.currentLogin
+        });
     });
 });
