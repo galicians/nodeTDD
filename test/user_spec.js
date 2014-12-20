@@ -1,15 +1,19 @@
 var should = require('should');
-var User = require('../models/user')
+var User = require('../models/user');
 
 describe("User", function() {
 
     describe("by default", function(){
         var user = {};
+
         before(function() {
-            user = new User({emal : "galicians@gmail.com"})
+            user = new User({email : "galicians@gmail.com"})
         });
 
-        it("email is galicians@gmail.com");
+        it("email is galicians@gmail.com", function() {
+            user.email.should.equal("galicians@gmail.com");
+        });
+
         it("has and authentication token");
         it("has a pending status");
         it("has a created date");
