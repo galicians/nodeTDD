@@ -7,8 +7,12 @@ describe("Registration", function(){
         before(function () {
             regResult = Registration.applyForMembership({email : "galicians@gmail.com"})
         });
-        it("is successful");
-        it("creates a user");
+        it("is successful", function(){
+            regResult.success.should.equal(true);
+        });
+        it("creates a user", function(){
+            regResult.user.should.be.defined;
+        });
         it("creates a log entry");
         it("sets the user's sttus to approved");
         it("offers a welcome message");
