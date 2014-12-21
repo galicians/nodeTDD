@@ -8,8 +8,24 @@ var Application = function(args){
     app.status = "pending";
     app.message = null;
 
-    return app;
-    
+    app.isValid = function(){
+        return app.status == 'validated';
+    };
+
+    app.isInvalid = function(){
+        return !isValid();
+    };
+
+    app.setInvalid = function(message){
+        app.status = "invalid";
+        app.message = message;
+    };
+
+    app.validate = function(message){
+        app.status ="validated";
+    };
+
+    return app;  
 };
 
 module.exports = Application
