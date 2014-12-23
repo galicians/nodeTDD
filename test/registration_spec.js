@@ -5,7 +5,7 @@ describe("Registration", function(){
     describe("a valid application", function() {
         var regResult = {};
         before(function () {
-            regResult = Registration.applyForMembership({email : "galicians@gmail.com"})
+            regResult = Registration.applyForMembership({email : "galicians@gmail.com"});
         });
         it("is successful", function(){
             regResult.success.should.equal(true);
@@ -37,4 +37,4 @@ describe("Registration", function(){
         it("is not successful");
         it("tells user that email already exists");
     });
-})
+});

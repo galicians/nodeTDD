@@ -7,7 +7,7 @@ describe("User", function() {
         var user = {};
 
         before(function() {
-            user = new User({email : "galicians@gmail.com"})
+            user = new User({email : "galicians@gmail.com"});
         });
 
         it("email is galicians@gmail.com", function() {
@@ -23,7 +23,7 @@ describe("User", function() {
             user.createdAt.should.be.defined;
         });
         it("has a signInCount of 0", function() {
-            user.signInCount.should.equal(0)
+            user.signInCount.should.equal(0);
         });
         it("has lastLogin", function() {
             user.lastLoginAt.should.be.defined;

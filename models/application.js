@@ -28,4 +28,4 @@ var Application = function(args){
     return app;  
 };
 
-module.exports = Application
+module.exports = Application;

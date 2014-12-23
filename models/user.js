@@ -1,5 +1,5 @@
 var assert = require("assert");
-var utility = require("../lib/utility")
+var utility = require("../lib/utility");
 var User = function(args){
     assert.ok(args.email, "Email is required");
     var user = {};
@@ -14,4 +14,4 @@ var User = function(args){
     return user;
 };
 
-module.exports = User
+module.exports = User;

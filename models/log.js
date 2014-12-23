@@ -1,7 +1,7 @@
 var assert = require("assert");
 
 var Log = function(args){
-    assert.ok(args.subject && args.entry && args.userId, "Need subject, etnry and user id")
+    assert.ok(args.subject && args.entry && args.userId, "Need subject, etnry and user id");
     var log = {};
     log.subject = args.subject;
     log.entry = args.entry;
@@ -9,4 +9,4 @@ var Log = function(args){
     log.userId = args.userId;
 
     return log;
-}
+};
